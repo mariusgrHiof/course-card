@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --light-blue-bg: #e7f1ea;
+  --color-title: #415b7c;
+  --shape-blue-bg: #d8dbec;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background: #ebf1ff;
+}
+img {
+  max-width: 100%;
+}
+
+/* Utility */
+
+.container {
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Main styles */
+
+.card {
+  max-width: 375px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  background: #fff;
+}
+
+.card:hover .hero__oval {
+  transform: scale(1.4);
+}
+
+.hero {
+  padding: 3em 1em;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: var(--light-blue-bg);
+  position: relative;
+}
+
+.hero__oval {
+  position: absolute;
+  height: 120px;
+  width: 60px;
+  background-color: #555;
+  border-radius: 50%;
+  background: var(--shape-blue-bg);
+}
+
+.hero__title {
+  font-size: 1.5rem;
+  width: 85%;
+  text-align: right;
+  color: var(--color-title);
+  z-index: 50;
+}
+
+.course-info {
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin: 1em;
+}
+
+.course-info__details {
+  display: flex;
+  margin-bottom: 7em;
+}
+
+.course-info__stats {
+  width: 50%;
+}
+
+#instructor {
+  font-weight: bold;
+  margin-top: 0.3em;
+  display: inline-block;
+}
+
+.course-info__instructor-img {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.course-info__instructor-img img {
+  border-radius: 50%;
+}
+
+.level {
+}
+
+/*
+DESCRIPTION:
+
+You challenge is clone a course card from Scrimba's homepage.
+
+For the layout, you can go grid or flex.
+
+Some extra things to look into:
+ - logical properties for margin and padding
+ - the new color syntax (for RGB and HSL)
+ 
+ Stretch goals: 
+  - Add those fun bubble animations!
+  - Create a set of cards where the colors (and other things?) are updated through the use of custom properties
+
+*/
+
+/* Write your code here 👇 */
