@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
 *,
 *::before,
 *::after {
@@ -19,7 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background: #ebf1ff;
 }
 img {
@@ -66,6 +66,19 @@ img {
 .card:hover .hero__pacman {
   transform: translateY(50px) translateX(40px) rotate(40deg) scale(1.3);
   transition: transform 0.2s ease-in-out;
+}
+
+.card:hover .course-info__details {
+  transform: translateY(-3px);
+}
+
+.card:hover .css-typing p:nth-child(1) {
+  opacity: 1;
+  width: 20.3em;
+
+  animation: type 2s steps(40, end);
+
+  animation-fill-mode: forwards;
 }
 
 .hero {
@@ -122,7 +135,7 @@ img {
   top: -45px;
   left: -65px;
   display: block;
-  content: '';
+  content: "";
   transform: rotate(-35deg);
 }
 .hero__five-star:after {
@@ -137,7 +150,7 @@ img {
   border-bottom: 70px solid var(--shape-blue-bg);
   border-left: 100px solid transparent;
   transform: rotate(-70deg);
-  content: '';
+  content: "";
 }
 
 .hero__pacman {
@@ -174,9 +187,20 @@ img {
   position: relative;
 }
 
+.oval {
+  top: -20px;
+  left: -40px;
+  width: 120%;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+}
+
 .course-info__details {
   display: flex;
   margin-bottom: 8em;
+  z-index: 50;
 }
 
 .course-info__stats {
@@ -198,7 +222,33 @@ img {
   border-radius: 50%;
 }
 
-.level {
+.css-typing p {
+  border-right: 0.15em solid orange;
+  font-family: "Courier";
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.css-typing p:nth-child(1) {
+  opacity: 0;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: 0.15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 /*
